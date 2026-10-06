@@ -1,0 +1,9 @@
+# Martinez-Vargas et al., Hydrogen 2026, 7, 55 (MartinezVargas_2026_HydrogenRecycledAluminumMicroparticles.pdf)
+# Recycled AA3104/5182/5042 can powder, 1.0 M NaOH, 55 +/- 1 C, 400 rpm, 250 mL Kitasato, n=3
+# d_mean from Table 2; Qmax/tr from Table 2 (mean +/- SEM); V_cum from Fig. 4b (text p.6)
+# kd from Fig. 9, diffusion-controlled SCM, Eq. (11), alpha normalised to EXPERIMENTAL Vmax
+# NOTE: charged Al mass is NOT reported in the paper. See notes.md.
+sieve_range_um,d_mean_um,Qmax_mL_min,Qmax_sem,tr_min,tr_sem,V_cum_mL,kd_min_inv,label
+180-250,215,18.77,2.00,14.86,0.18,106,0.137,c
+300-425,363,14.68,0.76,25.12,0.81,132,0.064,b
+425-500,463,13.14,0.18,29.30,1.64,102,0.050,a

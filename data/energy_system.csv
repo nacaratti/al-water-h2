@@ -1,0 +1,7 @@
+# Kaur & Verma, Journal of Energy Storage / critical assessment (Kaur_2024_CriticalAssessmentAluminumWaterReaction.pdf), Sec. 6
+# CAUTION: the Hoopes CO2 figure as printed (11 kg CO2/kg H2) is inconsistent with the
+# 12.7 kg CO2/kg Al factor used for Hall-Heroult (12.7 * 9 = 114.3). Recomputed in matlab/modelo/co2_hoopes_recalculado.m.
+route,kWh_per_kg_Al,kWh_per_kg_H2,kgCO2_per_kg_H2_as_printed,note
+hall_heroult,21.24,191.16,114.3,"primary Al from bauxite; 9 kg Al per kg H2 at 3.7 wt%"
+hoopes,17.04,153.36,11.0,"electrolytic refining; CO2 value inconsistent as printed"
+scrap,,4.0,0.0,"scrap Al used directly; electrolysis step abolished"

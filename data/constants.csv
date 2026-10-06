@@ -1,0 +1,10 @@
+# Physical constants and anchors, each traced to its source
+quantity,value,unit,source
+rho_B_molar,0.1,mol/cm3,"Martinez-Salazar 2025, Sec. 3.3 (molar density of Al atoms)"
+C_Ao,0.056,mol/cm2,"Martinez-Salazar 2025, Sec. 3.3 (water conc. at particle surface, as printed)"
+b_stoich,0.5,-,"Martinez-Salazar 2025, Sec. 3.3 (Al:H2O ratio)"
+L0_plate,0.015,cm,"Martinez-Salazar 2025, Sec. 3.3 (half-thickness)"
+rho_Al,2.70,g/cm3,"standard"
+M_Al,26.98,g/mol,"standard"
+H2_yield_STP,1245,mL/g_Al,"Martinez-Vargas 2026, Sec. 4; also Alane white paper (Akbar & Unal 2025)"
+oxide_film,2e-7,cm,"2-5 nm native Al2O3; Niu 2025 and Martinez-Vargas 2026"

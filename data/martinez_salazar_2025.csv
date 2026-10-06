@@ -1,0 +1,7 @@
+# Martinez-Salazar et al., Processes 2025, 13, 798 (MartinezSalazar_2025_KineticsHydrogenAluminumAlloyCorrosion.pdf)
+# AA3104 flat plate 0.15 mm thick (L0 = half-thickness = 0.015 cm), seawater + HCl + 0.17 M Na2MoO4
+# 40.67 g Al charged. Modified SCM: non-proportional shell (n) + time-dependent D = D0/(k t + 1)
+# Only the 1.125 M case is fitted by the pure-diffusion model over the whole reaction (R2 = 0.995).
+# Higher concentrations require the two-regime (short-time diffusion / long-time chemical) split.
+HCl_M,D0_cm2_s,k_s_inv,n_shell,R2,regime
+1.125,1.37e-7,2.49e-4,2.68,0.995,diffusion_whole

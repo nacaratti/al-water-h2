@@ -1,0 +1,6 @@
+function p = faixa(ax, xlims, ylims, cor, alfa)
+%FAIXA Retangulo sombreado (equivalente ao axvspan/axhspan do matplotlib).
+p = patch(ax, [xlims(1) xlims(2) xlims(2) xlims(1)], ...
+              [ylims(1) ylims(1) ylims(2) ylims(2)], cor, ...
+          'FaceAlpha', alfa, 'EdgeColor', 'none', 'HandleVisibility', 'off');
+end

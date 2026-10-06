@@ -1,0 +1,12 @@
+# Kaur & Verma, "A critical assessment..." (Kaur_2024_CriticalAssessmentAluminumWaterReaction.pdf), Sec. 6.2
+# All prices as printed in the source; conversions (lb->kg, per-500g->per-kg) done in
+# matlab/modelo/custo_kg_h2.m, not here, so this file preserves the exact printed figures.
+item,price,unit,note
+aluminium_primary,1.0092,USD/lb,"'the cheapest at $1.0092 lb' -- cited to ref [268] in the source"
+aluminium_scrap_ratio,0.3333,fraction_of_primary,"'the price of scrap Al is one-third of the pure Al'"
+naoh,13.95,USD/500g,"minimum purity 96%"
+koh,16.95,USD/500g,"minimum purity 85%"
+gallium,231.19,USD/kg,"liquid-metal activator"
+indium,218.62,USD/kg,"liquid-metal activator"
+lithium,43.654,USD/kg,"liquid-metal activator"
+al_water_h2_topdown,21.0,USD/kg_H2,"the source's own top-down estimate; states the ACTUAL cost 'is certain to be higher' due to unaccounted logistics, electricity, and byproduct-reprocessing costs -- so this is itself a lower bound, not a definitive figure"
