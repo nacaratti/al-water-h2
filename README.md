@@ -13,6 +13,8 @@ contains a three-level model that makes that connection, implemented entirely in
 together with every script needed to reproduce the fits, numbers and figures reported in the
 paper.
 
+![The three modelling levels and the quantities passed between them](matlab/fig/fig1_scales.png)
+
 ---
 
 ## What was done
@@ -86,6 +88,36 @@ In short: the particle kinetics are well described, but **system viability is go
 supply-chain composition (external scrap) and alkali recovery**, not by further gains in
 intrinsic kinetics. All thresholds are screening values under the stated literature inputs
 and need reactor-scale and process data to be confirmed.
+
+---
+
+## Selected figures
+
+**Particle scale.** Fit of the spherical shrinking-core model to the three sieve cuts
+(Figure 2) and the size scaling it implies, with the chemical-to-diffusion crossover
+(Figure 3).
+
+![Fit to the three sieve cuts](matlab/fig/fig2_fit.png)
+
+![Size scaling, regime crossover and the absent yield optimum](matlab/fig/fig3_size.png)
+
+**Reactor scale.** Continuous feed holds a 1 kW demand that a single batch cannot, and the
+thermal response sets the make-up water penalty (Figure 5), which behaves as a threshold in
+the heat-loss coefficient *UA* (Figure 6).
+
+<p align="center">
+  <img src="matlab/fig/fig5_design.png" alt="Continuous feed and the water penalty" width="48%">
+  <img src="matlab/fig/fig5b_sensitivity.png" alt="Water penalty as a threshold in UA" width="48%">
+</p>
+
+**System scale.** Energy break-even and carbon intensity against the external scrap fraction
+(Figure 7), and feedstock cost with the effect of NaOH recovery (Figure 9).
+
+![Energy break-even and carbon intensity](matlab/fig/fig6_energy.png)
+
+![Feedstock cost and NaOH recovery](matlab/fig/fig8_cost.png)
+
+All figures are in `matlab/fig/` as editable `.fig`, vector `.pdf` and 300 dpi `.png`.
 
 ---
 
