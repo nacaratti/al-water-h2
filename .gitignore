@@ -2,3 +2,4 @@
 *.m~
 .DS_Store
 Thumbs.db
+matlab/fig1_scales.m

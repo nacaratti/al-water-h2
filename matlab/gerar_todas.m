@@ -6,8 +6,11 @@
 % Para editar uma figura depois:  >> openfig('fig/fig3_size.fig')
 aqui = fileparts(mfilename('fullpath'));
 addpath(aqui, fullfile(aqui, 'auxiliares'));
-figs = {@fig1_scales, @fig2_fit, @fig3_size, @fig4_designcurve, @fig5_design, ...
+figs = {@fig2_fit, @fig3_size, @fig4_designcurve, @fig5_design, ...
         @fig5b_sensitivity, @fig6_energy, @fig7_bayerloop, @fig8_cost, @figS1_designmap};
+if exist(fullfile(aqui, 'fig1_scales.m'), 'file')   % esquema da Fig. 1: ja pronto em fig/
+    figs = [{@fig1_scales}, figs];
+end
 for k = 1:numel(figs)
     try
         figs{k}();
