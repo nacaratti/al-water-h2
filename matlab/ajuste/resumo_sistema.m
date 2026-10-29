@@ -22,9 +22,12 @@ fprintf('\nPrecos do Al: primario $%.3f/kg, sucata $%.3f/kg; NaOH $%.2f/kg\n', .
         K.AL_PRIM_USD_KG, K.AL_SUCATA_USD_KG, K.NAOH_USD_KG);
 fprintf('So Al em phi=0: $%.2f/kg H2 (estimativa top-down da fonte: $%.1f/kg H2 -- diferem %.0f%%)\n', ...
         c_al0, K.CUSTO_TOPDOWN, abs(c_al0 - K.CUSTO_TOPDOWN) / K.CUSTO_TOPDOWN * 100);
-fprintf('So NaOH, sem recuperacao: $%.1f/kg H2 -- %.0fx o custo do Al\n', c_naoh0, c_naoh0 / c_al0);
+fprintf('So NaOH, sem recuperacao: $%.2f/kg H2 (%.1f kg NaOH/kg H2 a $%.0f/t, Baral et al. 2025)\n', ...
+        c_naoh0, K.NAOH_KG_KG_AL * K.AL_POR_H2, K.NAOH_USD_KG * 1000);
 for phi = [0 0.5 0.74 1]
-    [tot, c_al] = custo_kg_h2(phi, 0);
-    fprintf('  phi=%4.2f  so Al=$%7.2f/kg H2   +NaOH novo=$%9.2f/kg H2   (SMR: $%.2f/kg H2)\n', ...
-            phi, c_al, tot, K.CUSTO_SMR);
+    [tot, c_al, c_naoh] = custo_kg_h2(phi, 0);
+    fprintf('  phi=%4.2f  so Al=$%6.2f   +NaOH novo=$%6.2f/kg H2 (NaOH = %3.0f%% do Al; %.1fx o SMR de $%.2f)\n', ...
+            phi, c_al, tot, 100 * c_naoh / c_al, tot / K.CUSTO_SMR, K.CUSTO_SMR);
 end
+fprintf('Em phi=0.74, recuperacao total de NaOH: gratuita -> $%.2f/kg H2; a $%.0f/t (regenerado) -> $%.2f/kg H2\n', ...
+        custo_kg_h2(0.74, 1, 0), K.NAOH_REGEN_USD_KG * 1000, custo_kg_h2(0.74, 1, K.NAOH_REGEN_USD_KG));

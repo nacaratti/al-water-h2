@@ -77,6 +77,7 @@ OCR-extracted reference list truncated it (flagged individually below).
 | yang2023clean | akbar2025 (in-text) | — | B | H2 storage/transport review |
 | akyildiz2024 | akbar2025 (in-text) | — | B | Al hydrolysis, different solutions |
 | gao2023energies | akbar2025 (in-text) | — | B | Al-based fuels review |
+| baral2025 | added by the authors | — | **A** | commodity NaOH price (US$219/t) and regenerated-NaOH cost (US$363/t), Table 1; replaces the laboratory NaOH price of kaur2024 in the cost model |
 
 Two candidates NOT dropped in: [191] (Al-Bi-NaCl, Mater. Res. Express, similar to
 chen2020, redundant) and [197] (Al-CaH2-salt milling, similar to liu2015rsc, redundant)
