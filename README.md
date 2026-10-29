@@ -134,7 +134,7 @@ All figures are in `matlab/fig/` as editable `.fig`, vector `.pdf` and 300 dpi `
 ├── matlab/
 │   ├── gerar_todas.m            # draws every figure -> matlab/fig/*.fig, *.pdf, *.png
 │   ├── exportar_dados.m         # recomputes the data behind every figure -> matlab/dados/*.mat
-│   ├── fig2_fit.m ... figS1_designmap.m      # one script per data figure (Figure 1 is a schematic, provided ready-made in fig/ and figures/)
+│   ├── fig2_fit.m ... figS1_designmap.m      # one script per data figure (Figure 1 is a schematic, provided ready-made in fig/)
 │   ├── modelo/                  # the model
 │   │   ├── constantes.m             # all physical, design and literature constants
 │   │   ├── simular_particula.m      # Level 1: spherical shrinking core, series resistances, densification
@@ -163,7 +163,7 @@ All figures are in `matlab/fig/` as editable `.fig`, vector `.pdf` and 300 dpi `
 │   ├── notes.md                 # data provenance and caveats -- read this first
 │   ├── bibliography_provenance.md
 │   └── *.csv
-├── figures/                     # PDF figures as used in the manuscript
+├── figures/                     # PDF figures as used in the manuscript (data figures; Figure 1 is in matlab/fig)
 └── LICENSE
 ```
 
