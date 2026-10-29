@@ -55,7 +55,9 @@ paper.
   (53.4 kWh/kg H₂) and steam-methane reforming.
 - A separate variable *r* for **closing the reaction's own loop** (recycling the Al(OH)₃
   byproduct through Bayer + Hall–Héroult), to show it is not equivalent to external scrap.
-- A bottom-up **cost screening** of aluminium and NaOH, including NaOH recovery.
+- A bottom-up **cost screening** of aluminium and NaOH, with NaOH at its commodity price
+  (US$219/t, Baral et al. 2025) and NaOH recovery treated either as free or at the
+  US$363/t that the same source gives for regenerated NaOH.
 
 ### Figures
 
@@ -82,10 +84,12 @@ and 300 dpi `.png` versions. The figure scripts read the data in `matlab/dados/*
 | CO₂ at φ* | ≈ 30 kg CO₂ / kg H₂ |
 | Bayer-loop closure beyond which no φ reaches break-even, *r*_crit | 0.46 |
 | Al-only feedstock cost (φ = 0) vs literature top-down estimate | US$ 20.0 vs 21 /kg H₂ (within 5 %) |
-| Unrecovered NaOH cost | ≈ US$ 372 /kg H₂ (≈ 37× the aluminium cost at φ*) |
+| Unrecovered NaOH cost (commodity price, US$219/t) | ≈ US$ 2.9 /kg H₂ (≈ 29 % of the aluminium cost at φ*) |
+| Feedstock cost floor at φ* (Al + fresh NaOH) | ≈ US$ 13.1 /kg H₂ (≈ 4.5× steam methane reforming) |
 
 In short: the particle kinetics are well described, but **system viability is governed by
-supply-chain composition (external scrap) and alkali recovery**, not by further gains in
+supply-chain composition (external scrap)**, which sets both the energy balance and the
+aluminium-dominated feedstock cost, not by further gains in
 intrinsic kinetics. All thresholds are screening values under the stated literature inputs
 and need reactor-scale and process data to be confirmed.
 
@@ -105,13 +109,15 @@ and need reactor-scale and process data to be confirmed.
 thermal response sets the make-up water penalty (Figure 5), which behaves as a threshold in
 the heat-loss coefficient *UA* (Figure 6).
 
+![Continuous feed and the water penalty](matlab/fig/fig5_design.png)
+
 <p align="center">
-  <img src="matlab/fig/fig5_design.png" alt="Continuous feed and the water penalty" width="48%">
-  <img src="matlab/fig/fig5b_sensitivity.png" alt="Water penalty as a threshold in UA" width="48%">
+  <img src="matlab/fig/fig5b_sensitivity.png" alt="Water penalty as a threshold in UA" width="60%">
 </p>
 
 **System scale.** Energy break-even and carbon intensity against the external scrap fraction
-(Figure 7), and feedstock cost with the effect of NaOH recovery (Figure 9).
+(Figure 7), and the feedstock cost floor, dominated by aluminium, with the limited effect of
+NaOH recovery (Figure 9).
 
 ![Energy break-even and carbon intensity](matlab/fig/fig6_energy.png)
 

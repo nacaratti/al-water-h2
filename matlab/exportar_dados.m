@@ -108,8 +108,12 @@ end
 function D = dados_fig8_cost()
 K = constantes();
 phi = linspace(0, 1, 200)'; rec = linspace(0, 1, 200)';
-[~, c_al] = custo_kg_h2(phi);
-D = struct('phi', phi, 'al_only', c_al, 'recovery', rec, 'cost_rec', custo_kg_h2(0.74, rec), ...
+[total_fresco, c_al] = custo_kg_h2(phi);                          % sem recuperacao de NaOH
+[~, al_star, naoh_star] = custo_kg_h2(0.74);
+D = struct('phi', phi, 'al_only', c_al, 'al_naoh', total_fresco, 'recovery', rec, ...
+           'cost_rec_free', custo_kg_h2(0.74, rec, 0), ...              % NaOH recuperado gratuito
+           'cost_rec_regen', custo_kg_h2(0.74, rec, K.NAOH_REGEN_USD_KG), ... % a US$363/t
+           'al_star', al_star, 'naoh_star', naoh_star, ...
            'smr', K.CUSTO_SMR, 'topdown', K.CUSTO_TOPDOWN, 'al0', c_al(1));
 end
 

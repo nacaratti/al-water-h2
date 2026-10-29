@@ -38,7 +38,11 @@ K.KWH_ELETROLISE    = 53.4;    % kWh/kg H2, eletrolise da agua (Tang et al. 2023
 K.KWH_KG_AL_RECICLO = 13.0;    % so eletrolise; exclui calcinacao -> limite inferior
 K.AL_PRIM_USD_KG    = 1.0092 * 2.20462;      % "$1.0092/lb"
 K.AL_SUCATA_USD_KG  = K.AL_PRIM_USD_KG / 3;  % "um terco do preco do Al puro"
-K.NAOH_USD_KG       = 13.95 / 0.5;           % "$13.95 por 500 g"
+% NaOH a preco de commodity (Baral, Galvez-Martos & Hanein, Green Chem. 2025, 27, 3431,
+% Tabela 1; USD2019, media ponderada do comercio europeu, UN Comtrade). Substitui o preco de
+% reagente de laboratorio de Kaur & Verma ("$13.95 por 500 g" = US$27.90/kg), ~127x maior.
+K.NAOH_USD_KG       = 219 / 1000;            % NaOH comercial, US$219/t
+K.NAOH_REGEN_USD_KG = 363 / 1000;            % NaOH regenerado a partir de Na2CO3, US$363/t (mesma fonte)
 K.M_NAOH            = 40.00;
 K.NAOH_KG_KG_AL     = 1.0 * K.M_NAOH / K.M_AL;   % sem recuperacao
 K.CUSTO_SMR         = 2.90;    % US$/kg H2, reforma a vapor do metano (Tang et al. 2023)

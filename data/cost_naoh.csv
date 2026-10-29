@@ -1,0 +1,9 @@
+# Baral, Galvez-Martos & Hanein, "Realizing CO2 emission reduction in lime and soda ash
+# manufacturing through anion exchange", Green Chem. 2025, 27, 3431-3442,
+# https://doi.org/10.1039/d4gc05568c, Table 1 (base year 2019, USD, European scope).
+# Commercial NaOH: weighted average of UN Comtrade import/export values covering 90% of
+# traded flow. Used in matlab/modelo/constantes.m (K.NAOH_USD_KG, K.NAOH_REGEN_USD_KG).
+item,price,unit,note
+naoh_commercial,219,USD2019/t,"commodity NaOH; replaces the laboratory price of Kaur & Verma (USD 27.90/kg)"
+naoh_renewable,218,USD2019/t,"NaOH from 100% renewable electricity (not used)"
+naoh_recycled,363,USD2019/t,"NaOH regenerated from Na2CO3; used as the priced bound for NaOH recovery"
